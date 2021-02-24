@@ -1,0 +1,51 @@
+
+.footer {
+  width: 100vw;
+  color: #333333;
+  background-color:rgb(230, 242, 248);
+  padding: 5vh 5vw;
+  display: flex;
+}
+
+.footer-title {
+  color:skyblue;
+  padding: 1vh 0;
+  font-weight: 900;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+
+@media screen and (max-width: 400px) {
+  .footer-contents {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-contents {
+    flex-wrap: wrap;
+  }
+}
+
+
+.cuenta-details {
+  margin: 0 4vw;
+  text-align: left;
+}
+
+.footer-content-head {
+  font-size: 15px;
+  font-weight: 550;
+  margin-bottom: 10px;
+  color: rgb(165, 165, 165);
+}
+
+.footer-link {
+  color: #5f5f5f;
+  font-size: 12px;
+  line-height: 30px;
+}

@@ -1,0 +1,46 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <div class='title-content'>
+    <h3 class='title'>CUENTAへようこそ</h3>
+  </div>
+  <div class='account'>
+    <%# acount-cardを繰り返す %>
+    <ul class='account-lists'>
+      <li class='lists'>
+        <%# カード全体がクリックできるようにする%>
+        <%#= link_to item_path(item.id) do %>
+        <div class='account-name'>
+          <h2>仮想通貨アカ</h2>
+        </div>
+        <div class='info'>
+          <div class='account-total'>
+            <div class='asset'>
+            </div>
+            <div class='deposit'>
+            </div>
+          </div>
+          <div class='account-profit'>
+            <div class='price'>
+            </div>
+            <div class='percent'>
+            </div>
+          </div>
+        </div>
+        <%# end %>
+        <%# /カード全体がクリックできるようにする%>
+      </li>
+    </ul>
+    <%# /acount-cardを繰り返す %>
+  </div>
+  <%# ニュースをどっかから持ってくる %>
+  <div class='topics'>
+    <div class='topics-card'>
+      <div class='topic-image'>
+        <div class='topictitle'>
+        </div>
+      </div>
+    </div>
+  </div>
+    <%# /ニュースをどっかから持ってくる %>
+</div>
+<%= render "shared/footer" %>

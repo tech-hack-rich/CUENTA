@@ -1,0 +1,13 @@
+.main{
+  background-color: rgb(230, 242, 248);
+  width: 100vw;
+  padding: 5vh 5vw;
+  min-height: 100vh;
+}
+
+.title {
+  border: cornflowerblue;
+  color:black;
+  font-weight: 900;
+  text-align: center;
+}

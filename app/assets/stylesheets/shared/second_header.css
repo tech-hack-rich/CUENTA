@@ -1,15 +1,30 @@
 .second-header {
   width: 100vw;
   height: 10vh;
+  padding: 5vh 5vw;
   background-color: white;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+
 }
 
-h3 {
+.second-header-title {
   color:skyblue;
   padding: 1vh 0;
   font-weight: 900;
   font-size: 22px;
+  text-align: center;
+}
+
+.home-btn {
+  margin-right: 10%;
+}
+
+.root-btn {
+  color: rgb(145, 143, 143);
+  font-weight: bolder;
+  font-size: 17px;
+  text-decoration: none;
+
 }

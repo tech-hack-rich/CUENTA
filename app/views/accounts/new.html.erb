@@ -1,0 +1,35 @@
+<div class='footerFixer'>
+  <%= render "shared/second-header" %>
+  <%= form_with model: @account, url: accounts_path, class: 'registration-main', local: true do |f| %>
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class='form-header-text'>
+        CUENTAの登録
+      </h1>
+    </div>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">CUENTA（アカウント）name</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"input-default", id:"name", placeholder:"例) 仮想通貨アカウント", maxlength:"25", autofocus: true %>
+    </div>
+    <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">CUENTA（アカウント）の説明</label>
+        <span class="indispensable">空白でも可</span>
+      </div>
+      <%= f.text_area :info, class:"input-default", id:"info", placeholder:"例) bitcoin" %>
+    </div>
+    <div class='register-btn'>
+      <%= f.submit "CUENTAの登録" ,class:"register-blue-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  </div>
+  <%= render "shared/footer" %>
+</div>

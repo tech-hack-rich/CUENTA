@@ -1,0 +1,34 @@
+<%# クリックして詳細画面に飛ぶようにする%>
+<%# link_to account_path(account.id) do %>
+<li class='list'>
+  <div class='account-title'>
+    <h2 class='account-name'>
+      <%= account.name %>
+    </h2>
+  </div>
+  <div class='info'>
+    <div class='account-asset'>
+      <div>
+        <h2 class='asset-title'>総資産</h2>
+      </div>
+      <div class='asset'>
+        <h1>資産----------¥ 500,000</h1>
+      </div>
+      <div class='deposit'>
+        <h1>入金額-------¥ 320,000</h1>
+      </div>
+    </div>
+    <div class='account-profit'>
+      <div>
+        <h2 class='profit-title'>利益</h2>
+      </div>
+      <div class='price'>
+        <h1>利益----------¥ 180,000</h1>
+      </div>
+      <div class='percent'>
+        <h1>利益率---------- 56.25%</h1>
+      </div>
+    </div>
+  </div>
+</li>
+<%# end %>

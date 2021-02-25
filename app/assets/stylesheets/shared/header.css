@@ -17,6 +17,7 @@
   color:skyblue;
   padding: 1vh 0;
   font-weight: 900;
+  font-size: 20px;
 }
 
 .nav {
@@ -25,7 +26,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1vh 0;
-  border: tomato solid 1px;
 }
 
 .lists-right {
@@ -37,30 +37,33 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: rgb(145, 143, 143);
   font-weight: bold;
 }
 
 .account-create {
   text-decoration: none;
-  color: #333333;
+  color: rgb(145, 143, 143);
   margin-right: 3vw;
   font-weight: bold;
 }
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: rgb(145, 143, 143);
+  font-weight: bold;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: rgb(145, 143, 143);
+  font-weight: bold;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: rgb(145, 143, 143);
+  font-weight: bold;
 }

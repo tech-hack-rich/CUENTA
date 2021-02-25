@@ -4,11 +4,15 @@
     <h3 class='title'>CUENTA</h3>
   </div>
   <div class='account'>
-    <%# acount-cardを繰り返す %>
+    <%# ユーザーがサインインしていたら、以下を表示する%>
+    <% if user_signed_in? %>
     <ul class='account-lists'>
+      <%# サインイン中のユーザーがaccountを持っていたら表示する%>
+      <% if Account.where(user_id: current_user.id).exists? %>
+      <%= render partial: 'account', collection: @accounts %>
+      <%# /サインイン中のユーザーがaccountを持っていたら表示する%>
+      <% else %>
       <li class='list'>
-        <%# カード全体がクリックできるようにする%>
-        <%#= link_to item_path(item.id) do %>
         <div class='account-title'>
           <h2 class='account-name'>仮想通貨</h2>
         </div>
@@ -36,12 +40,42 @@
             </div>
           </div>
         </div>
-        <%# end %>
-        <%# /カード全体がクリックできるようにする%>
+      </li>
+      <% end %>
+    </ul>
+    <%# /ユーザーがサインインしていたら、以上を表示する%>
+    <% else %>
+    <ul class='account-lists'>
+      <li class='list'>
+        <div class='account-title'>
+          <h2 class='account-name'>仮想通貨</h2>
+        </div>
+        <div class='info'>
+          <div class='account-asset'>
+            <div>
+              <h2 class='asset-title'>総資産</h2>
+            </div>
+            <div class='asset'>
+              <h1>資産----------¥ 500,000</h1>
+            </div>
+            <div class='deposit'>
+              <h1>入金額-------¥ 320,000</h1>
+            </div>
+          </div>
+          <div class='account-profit'>
+            <div>
+              <h2 class='profit-title'>利益</h2>
+            </div>
+            <div class='price'>
+              <h1>利益----------¥ 180,000</h1>
+            </div>
+            <div class='percent'>
+              <h1>利益率---------- 56.25%</h1>
+            </div>
+          </div>
+        </div>
       </li>
       <li class='list'>
-        <%# カード全体がクリックできるようにする%>
-        <%#= link_to item_path(item.id) do %>
         <div class='account-title'>
           <h2 class='account-name'>積みてNISA</h2>
         </div>
@@ -69,12 +103,8 @@
             </div>
           </div>
         </div>
-        <%# end %>
-        <%# /カード全体がクリックできるようにする%>
       </li>
       <li class='list'>
-        <%# カード全体がクリックできるようにする%>
-        <%#= link_to item_path(item.id) do %>
         <div class='account-title'>
           <h2 class='account-name'>FX</h2>
         </div>
@@ -102,11 +132,9 @@
             </div>
           </div>
         </div>
-        <%# end %>
-        <%# /カード全体がクリックできるようにする%>
       </li>
     </ul>
-    <%# /acount-cardを繰り返す %>
+    <% end %>
   </div>
   <%# ニュースをどっかから持ってくる %>
   <div class='topics'>

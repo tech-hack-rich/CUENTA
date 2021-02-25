@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :accounts
 
   validates :nickname, presence: true, length: { maximum: 10 }
+
 end

@@ -25,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1vh 0;
+  border: tomato solid 1px;
 }
 
 .lists-right {
@@ -37,6 +38,13 @@
   text-decoration: none;
   margin-right: 3vw;
   color: #333333;
+  font-weight: bold;
+}
+
+.account-create {
+  text-decoration: none;
+  color: #333333;
+  margin-right: 3vw;
   font-weight: bold;
 }
 

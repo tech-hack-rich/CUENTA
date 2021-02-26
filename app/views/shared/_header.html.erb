@@ -1,10 +1,12 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
-  <div class='header-title'>CUENTA</div>
+  <div class='header-title'>
+    <%= link_to 'CUENTA', root_path, class: 'link-to-home' %>
+  </div>
   <div class='nav'>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname + 'さん、こんにちは', "#", class: "user-nickname" %></li>
+        <li><%= link_to current_user.nickname + 'さん', "#", class: "user-nickname" %></li>
         <li><%= link_to 'CUENTA作成', new_account_path, class: "account-create" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <%  else %>

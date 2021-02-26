@@ -3,6 +3,7 @@
   width: 100vw;
   padding: 5vh 5vw;
   min-height: 100vh;
+  border: red solid 1px;
 }
 
 .title {
@@ -25,6 +26,11 @@
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.link-to-show {
+  text-decoration: none;
+  color: black ;
 }
 
 .account-name {
@@ -54,3 +60,4 @@
   font-size: 17px;
   font-weight: bolder;
 }
+

@@ -1,0 +1,105 @@
+<%= render "shared/header" %>
+<div class='main'>
+  <div class='title-content'>
+    <h3 class='title'>
+      <%= @account.name %>
+    </h3>
+  </div>
+  <div class='show-account'>
+    <div class='info'>
+      <div class='account-asset'>
+        <div>
+          <h2 class='asset-title'>総資産</h2>
+        </div>
+        <div class='show-asset'>
+          <h1>資産----------¥ 500,000</h1>
+        </div>
+        <div class='show-deposit'>
+          <h1>入金額-------¥ 320,000</h1>
+        </div>
+      </div>
+      <div class='account-profit'>
+        <div>
+          <h2 class='profit-title'>利益</h2>
+        </div>
+        <div class='show-price'>
+          <h1>利益----------¥ 180,000</h1>
+        </div>
+        <div class='show-percent'>
+          <h1>利益率---------- 56.25%</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='record-space'>
+    <div class='asset-space'>
+      <div>
+        <h2 class='record-space-title'>資産記録</h2>
+      </div>
+      <div class='asset-form'>
+        <h3>資産記入フォーム</h3>
+      </div>
+      <div class='asset-record'>
+        <ul class='asset-record-lists'>
+          <li class='asset-list'>
+            <div class='record-info'>
+              <div>
+                <h2 class='create-date'>2021/02/21</h2>
+              </div>
+              <div>
+                <h2 class='asset-price'>¥  100,000</h2>
+              </div>
+            </div>
+            <div class='record-info'>
+              <div>
+                <h2 class='create-date'>2021/02/02</h2>
+              </div>
+              <div>
+                <h2 class='asset-price'>¥  200,000</h2>
+              </div>
+            </div>
+            <div class='record-info'>
+              <div>
+                <h2 class='create-date'>2021/02/01</h2>
+              </div>
+              <div>
+                <h2 class='asset-price'>¥  50,000</h2>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='asset-space'>
+      <div>
+        <h2 class='record-space-title'>入出金記録</h2>
+      </div>
+      <div class='asset-form'>
+        <h3>入出金額記入フォーム</h3>
+      </div>
+      <div class='asset-record'>
+        <ul class='asset-record-lists'>
+          <li class='asset-list'>
+            <div class='record-info'>
+              <div class='create-date'>
+                <h2 class='date'>2021/02/11</h2>
+              </div>
+              <div class='movement-price'>
+                <h2 class='movement-num'>¥  50,000</h2>
+              </div>
+            </div>
+            <div class='record-info'>
+              <div class='create-date'>
+                <h2 class='date'>2021/02/07</h2>
+              </div>
+              <div class='movement-price'>
+                <h2 class='movement-num'>¥  50,000</h2>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

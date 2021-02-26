@@ -19,10 +19,16 @@ class AccountsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @account = Account.find(params[:id])
+    unless current_user == @account.user
+      redirect_to root_path
+    end
+  end
 end
 
 private
   def account_params
     params.require(:account).permit(:name, :info).merge(user_id: current_user.id)
   end
-

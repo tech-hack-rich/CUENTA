@@ -1,0 +1,47 @@
+.show-account {
+  padding: 10px;
+  border-radius: 10px;
+  width: 60vw;
+  margin: 15px auto;
+  background-color: white;
+  border: solid red 1px;
+}
+
+.show-asset, .show-deposit, .show-price, .show-percent {
+  font-size: 30px;
+  color: rgb(63, 62, 62);
+}
+
+.record-space {
+  width: 60vw;
+  display: flex;
+  border: red solid 1px;
+  margin: 0 auto;
+}
+
+.asset-space {
+  border: red solid 1px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px auto;
+  padding: 10px;
+  width: 28vw;
+}
+
+.record-space-title {
+  font-size: 17px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.asset-form {
+  border: red solid 1px;
+  background-color: white;
+  font-size: 20px;
+}
+
+.record-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}

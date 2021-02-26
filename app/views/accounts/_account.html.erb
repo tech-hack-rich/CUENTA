@@ -1,6 +1,6 @@
 <%# クリックして詳細画面に飛ぶようにする%>
-<%# link_to account_path(account.id) do %>
 <li class='list'>
+<%= link_to account_path(account.id), class: 'link-to-show' do %>
   <div class='account-title'>
     <h2 class='account-name'>
       <%= account.name %>
@@ -30,5 +30,5 @@
       </div>
     </div>
   </div>
+<% end %>
 </li>
-<%# end %>

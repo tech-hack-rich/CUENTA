@@ -14,10 +14,14 @@
 }
 
 .header-title {
-  color:skyblue;
   padding: 1vh 0;
+}
+
+.link-to-home {
+  color:skyblue;
   font-weight: 900;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .nav {

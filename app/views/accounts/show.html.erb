@@ -1,10 +1,20 @@
 <%= render "shared/header" %>
 <div class='main'>
-  <div class='title-content'>
-    <h3 class='title'>
-      <%= @account.name %>
-    </h3>
+  <div class='show-title-content'>
+    <div class='title-content'>
+      <h3 class='title'>
+        <%= @account.name %>
+      </h3>
+    </div>
+    <div>
+      <%= link_to '編集/削除', edit_account_path(@account.id), class: "edit-btn" %>
+    </div>
   </div>
+  <% if @account.info.present? %>
+  <div class='account-info'>
+    <%= '概要 : ' + @account.info %>
+  </div>
+  <% end %>
   <div class='show-account'>
     <div class='info'>
       <div class='account-asset'>

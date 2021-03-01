@@ -23,6 +23,10 @@ class AccountsController < ApplicationController
   end
 
   def show
+    @asset = Asset.new  
+    @assets = @account.assets.all
+    @movement = Movement.new
+    @movements = @account.movements.all
   end
 
   def edit

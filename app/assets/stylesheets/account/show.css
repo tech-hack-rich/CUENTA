@@ -3,7 +3,6 @@
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
-  border: red 1px solid;
   width: 60vw;
 }
 
@@ -13,7 +12,6 @@
   font-weight: bolder;
   font-size: 17px;
   text-decoration: none;
-  border: red 1px solid;
 }
 
 .account-info {
@@ -27,7 +25,6 @@
   width: 60vw;
   margin: 15px auto;
   background-color: white;
-  border: solid red 1px;
 }
 
 .show-asset, .show-deposit, .show-price, .show-percent {
@@ -35,15 +32,14 @@
   color: rgb(63, 62, 62);
 }
 
+/* 資産記録欄 */
 .record-space {
   width: 60vw;
   display: flex;
-  border: red solid 1px;
   margin: 0 auto;
 }
 
-.asset-space {
-  border: red solid 1px;
+.record-area {
   background-color: white;
   border-radius: 10px;
   margin: 15px auto;
@@ -56,11 +52,59 @@
   font-weight: bolder;
   padding-bottom: 10px;
 }
-
-.asset-form {
-  border: red solid 1px;
+/* 資産記入フォーム */
+.record-form {
   background-color: white;
   font-size: 20px;
+}
+
+.date-select {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+  justify-content: center;
+}
+
+.date-select select {
+  width: 6vw;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  background: rgb(230, 242, 248);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.date-select p {
+  line-height: 50px;
+  padding: 0 5px;
+  font-size: 15px;
+}
+
+.input-amount {
+  width: 20vw;
+  background-color: rgb(230, 242, 248);
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.record-sapace-form {
+  text-align: center;
+}
+
+.create-record-btn {
+  width: 12vw;
+  background: skyblue;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  line-height: 30px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .record-info {

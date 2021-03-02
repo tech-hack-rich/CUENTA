@@ -42,9 +42,9 @@
 .record-area {
   background-color: white;
   border-radius: 10px;
-  margin: 15px auto;
+  margin: 0 auto;
   padding: 10px;
-  width: 28vw;
+  width: 29vw;
 }
 
 .record-space-title {
@@ -92,7 +92,7 @@
   align-items: center;
 }
 
-.record-sapace-form {
+.record-space-form {
   text-align: center;
 }
 
@@ -111,4 +111,8 @@
   display: flex;
   justify-content: space-between;
   margin: 5px;
+}
+
+.record-list {
+  border: solid red 1px;
 }

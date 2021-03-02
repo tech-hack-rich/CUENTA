@@ -23,10 +23,12 @@ class AccountsController < ApplicationController
   end
 
   def show
-    @asset = Asset.new  
-    @assets = @account.assets.all
+    @asset = Asset.new
+    @assets = @account.assets.order('created_at DESC')
+    @last_asset = @account.assets.order('created_at DESC').find_by(params[:id])
     @movement = Movement.new
-    @movements = @account.movements.all
+    @movements = @account.movements.order('created_at DESC')
+    @last_movement = @account.movements.order('created_at DESC').find_by(params[:id])
   end
 
   def edit

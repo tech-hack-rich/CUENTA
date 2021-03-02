@@ -22,10 +22,10 @@
           <h2 class='asset-title'>総資産</h2>
         </div>
         <div class='show-asset'>
-          <h1>資産----------¥ 500,000</h1>
+          <h1>資産------¥ <%= @last_asset.amount %></h1>
         </div>
         <div class='show-deposit'>
-          <h1>投資額-------¥ 320,000</h1>
+          <h1>投資額---¥ <%= @last_movement.amount %></h1>
         </div>
       </div>
       <div class='account-profit'>
@@ -63,48 +63,54 @@
                   date_separator: '%s'),
                 "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
         </div>
-        <div class='record-sapace-form'>
+        <div class='record-space-form'>
           <%= f.number_field :amount, min: 0, class: 'input-amount', placeholder: "資産を記入する" %>
         </div>
-        <div class='record-sapace-form'>
+        <div class='record-space-form'>
           <%= f.submit "OK", class: 'create-record-btn' %>
         </div>
         <% end %>
       </div>
       <div class='asset-record'>
         <ul class='asset-record-lists'>
-          <li class='asset-list'>
+          <div class='record-info'>
+            <div>
+              <h2 class='create-date'>日付</h2>
+            </div>
+            <div>
+              <h2 class='record-price'>金額</h2>
+            </div>
+          </div>
+          <% if @account.assets.present? %>
+          <%= render partial: 'asset', collection: @assets %>
+          <% else %>
+          <li class='record-list'>
             <div class='record-info'>
               <div>
-                <h2 class='create-date'>2021/02/21</h2>
+                <h2 class='create-date'>日付</h2>
               </div>
               <div>
-                <h2 class='asset-price'>¥  100,000</h2>
+                <h2 class='record-price'>金額</h2>
               </div>
             </div>
+          </li>
+          <li class='record-list'>
             <div class='record-info'>
               <div>
                 <h2 class='create-date'>2021/02/02</h2>
               </div>
               <div>
-                <h2 class='asset-price'>¥  200,000</h2>
-              </div>
-            </div>
-            <div class='record-info'>
-              <div>
-                <h2 class='create-date'>2021/02/01</h2>
-              </div>
-              <div>
-                <h2 class='asset-price'>¥  50,000</h2>
+                <h2 class='record-price'>¥  200,000</h2>
               </div>
             </div>
           </li>
+          <% end %>
         </ul>
       </div>
     </div>
     <div class='record-area'>
       <div>
-        <h2 class='record-space-title'>投資額</h2>
+        <h2 class='record-space-title'>投資記録</h2>
       </div>
       <div class='record-form'>
         <%= form_with(model: [@account, @movement], local: true) do |f| %>
@@ -123,34 +129,48 @@
                   date_separator: '%s'),
                 "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
         </div>
-        <div class='record-sapace-form'>
+        <div class='record-space-form'>
           <%= f.number_field :amount, min: 0, class: 'input-amount', placeholder: "投資額を記入する" %>
         </div>
-        <div class='record-sapace-form'>
+        <div class='record-space-form'>
           <%= f.submit "OK", class: 'create-record-btn' %>
         </div >
         <% end %>
       </div>
       <div class='asset-record'>
         <ul class='asset-record-lists'>
-          <li class='asset-list'>
+          <div class='record-info'>
+            <div>
+              <h2 class='create-date'>日付</h2>
+            </div>
+            <div>
+              <h2 class='record-price'>金額</h2>
+            </div>
+          </div>
+          <% if @account.movements.present? %>
+          <%= render partial: 'movement', collection: @movements %>
+          <% else %>
+          <li class='record-list'>
             <div class='record-info'>
               <div class='create-date'>
-                <h2 class='date'>2021/02/11</h2>
+                <h2 class='date'>日付</h2>
               </div>
-              <div class='movement-price'>
-                <h2 class='movement-num'>¥  50,000</h2>
+              <div class='record-price'>
+                <h2 class='record-num'>¥  金額</h2>
               </div>
             </div>
+          </li>
+          <li class='record-list'>
             <div class='record-info'>
               <div class='create-date'>
                 <h2 class='date'>2021/02/07</h2>
               </div>
-              <div class='movement-price'>
-                <h2 class='movement-num'>¥  50,000</h2>
+              <div class='record-price'>
+                <h2 class='record-num'>¥  50,000</h2>
               </div>
             </div>
           </li>
+          <% end %>
         </ul>
       </div>
     </div>

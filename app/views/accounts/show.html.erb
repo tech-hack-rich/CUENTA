@@ -21,12 +21,24 @@
         <div>
           <h2 class='asset-title'>総資産</h2>
         </div>
+        <% if @assets.present? %>
         <div class='show-asset'>
           <h1>資産------¥ <%= @last_asset.amount %></h1>
         </div>
+        <% else %>
+        <div class='show-asset'>
+          <h1>資産------¥ xxxxxxxx</h1>
+        </div>
+        <% end %>
+        <% if @movements.present? %>
         <div class='show-deposit'>
           <h1>投資額---¥ <%= @last_movement.amount %></h1>
         </div>
+        <% else %>
+        <div class='show-deposit'>
+          <h1>投資額---¥ xxxxxxxxx</h1>
+        </div>
+        <% end %>
       </div>
       <div class='account-profit'>
         <div>
@@ -80,6 +92,9 @@
             <div>
               <h2 class='record-price'>金額</h2>
             </div>
+            <div>
+              <h2 class='record-price'>記録削除</h2>
+            </div>
           </div>
           <% if @account.assets.present? %>
           <%= render partial: 'asset', collection: @assets %>
@@ -87,21 +102,14 @@
           <li class='record-list'>
             <div class='record-info'>
               <div>
-                <h2 class='create-date'>日付</h2>
-              </div>
-              <div>
-                <h2 class='record-price'>金額</h2>
-              </div>
-            </div>
-          </li>
-          <li class='record-list'>
-            <div class='record-info'>
-              <div>
-                <h2 class='create-date'>2021/02/02</h2>
+                <h2 class='create-date'>例 2021/02/02</h2>
               </div>
               <div>
                 <h2 class='record-price'>¥  200,000</h2>
               </div>
+              <div>
+              <h2 class='record-price'>削除ボタン</h2>
+            </div>
             </div>
           </li>
           <% end %>
@@ -146,28 +154,25 @@
             <div>
               <h2 class='record-price'>金額</h2>
             </div>
+            <div>
+              <h2 class='record-price'>記録削除</h2>
+            </div>
           </div>
           <% if @account.movements.present? %>
           <%= render partial: 'movement', collection: @movements %>
           <% else %>
-          <li class='record-list'>
-            <div class='record-info'>
-              <div class='create-date'>
-                <h2 class='date'>日付</h2>
-              </div>
-              <div class='record-price'>
-                <h2 class='record-num'>¥  金額</h2>
-              </div>
-            </div>
           </li>
           <li class='record-list'>
             <div class='record-info'>
               <div class='create-date'>
-                <h2 class='date'>2021/02/07</h2>
+                <h2 class='date'>例 2021/02/07</h2>
               </div>
               <div class='record-price'>
                 <h2 class='record-num'>¥  50,000</h2>
               </div>
+              <div>
+              <h2 class='record-price'>削除ボタン</h2>
+            </div>
             </div>
           </li>
           <% end %>

@@ -10,5 +10,8 @@
         <%= movement.amount %>
       </h2>
     </div>
+    <div class='record-delete-btn'>
+      <%= link_to "削除", account_movement_path(@account, movement), method: :delete, class: "delete-red-btn" %>
+    </div>
   </div>
 </li>

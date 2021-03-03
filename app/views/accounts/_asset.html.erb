@@ -10,5 +10,8 @@
         <%= asset.amount %>
       </h2>
     </div>
+    <div class='record-delete-btn'>
+      <%= link_to "削除", account_asset_path(@account, asset), method: :delete, class: "delete-red-btn" %>
+    </div>
   </div>
 </li>

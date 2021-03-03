@@ -113,6 +113,14 @@
   margin: 5px;
 }
 
-.record-list {
-  border: solid red 1px;
+.record-delete-btn {
+  border-radius: 8px;
+  border: red solid 1px;
+  background-color: tomato;
+}
+
+.delete-red-btn {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
 }

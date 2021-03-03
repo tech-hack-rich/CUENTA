@@ -1,16 +1,19 @@
 .main{
-  background-color: rgb(230, 242, 248);
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/MONACOIN595_TP_V.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   padding: 5vh 5vw;
   min-height: 100vh;
 }
 
 .title {
-  border: cornflowerblue;
-  color:black;
+  color:skyblue;
   font-weight: 900;
   font-size: 25px;
   text-align: center;
+  margin-top: 80px;
 }
 
 .account-lists {
@@ -21,7 +24,7 @@
 
 .list {
   margin: 20px 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.45);
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -52,7 +55,7 @@
 
 .asset, .deposit, .price, .percent { 
   font-size: 22px;
-  color: rgb(63, 62, 62);
+  color: black;
 }
 
 .profit-title {

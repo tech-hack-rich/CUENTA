@@ -5,7 +5,7 @@ class AssetsController < ApplicationController
     @asset = Asset.new(asset_params)
     if @asset.save
       redirect_to account_path(@asset.account)
-    else 
+    else
       @account = @asset.account
       @assets = @account.assets
       render "accounts/show"

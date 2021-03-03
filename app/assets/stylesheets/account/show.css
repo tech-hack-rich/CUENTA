@@ -1,14 +1,22 @@
 .show-title-content {
   display: flex;
   margin: 0 auto;
+  margin-top: 80px;
   align-items: center;
   justify-content: space-between;
   width: 60vw;
 }
 
+.show-title {
+  color:skyblue;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: center;
+}
+
 .edit-btn {
   padding: 0 80px;
-  color: rgb(145, 143, 143);
+  color: skyblue;
   font-weight: bolder;
   font-size: 17px;
   text-decoration: none;
@@ -20,11 +28,11 @@
 }
 
 .show-account {
-  padding: 10px;
+  padding: 10px 40px ;
   border-radius: 10px;
   width: 60vw;
   margin: 15px auto;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.80)
 }
 
 .show-asset, .show-deposit, .show-price, .show-percent {
@@ -40,7 +48,7 @@
 }
 
 .record-area {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.80);
   border-radius: 10px;
   margin: 0 auto;
   padding: 10px;
@@ -54,7 +62,6 @@
 }
 /* 資産記入フォーム */
 .record-form {
-  background-color: white;
   font-size: 20px;
 }
 

@@ -1,7 +1,10 @@
 .registration-main {
   width: 100vw;
   height: 100%;
-  background-color: rgb(230, 242, 248);
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/MONACOIN595_TP_V.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
 
@@ -10,6 +13,7 @@
 .form-wrap {
   width: 50%;
   padding-bottom: 50px;
+
 }
 
 .form-header {
@@ -17,6 +21,7 @@
   height: 120px;
   text-align: center;
   font-size: 22px;
+  margin-top: 85px;
 }
 
 .form-header-text {
@@ -66,7 +71,7 @@
 }
 
 .info-text {
-  color: #888;
+  color: black;
   font-size: 15px;
   margin-top: 3px;
 }

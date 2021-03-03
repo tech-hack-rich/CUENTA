@@ -1,4 +1,5 @@
 class AssetsController < ApplicationController
+  before_action :authenticate_user!
   
   def create
     @asset = Asset.new(asset_params)
@@ -8,6 +9,14 @@ class AssetsController < ApplicationController
       @account = @asset.account
       @assets = @account.assets
       render "accounts/show"
+    end
+  end
+
+  def destroy
+    @account = Account.find(params[:account_id])
+    account_asset = @account.assets.find(params[:id])
+    if account_asset.destroy
+      redirect_to request.referer
     end
   end
 

@@ -23,7 +23,7 @@
         </div>
         <% if @assets.present? %>
         <div class='show-asset'>
-          <h1>資産 ¥ <%= @last_asset.amount %></h1>
+          <h1>資産 ¥ <span id='asset'><%= @last_asset.amount %></span></h1>
         </div>
         <% else %>
         <div class='show-asset'>
@@ -32,7 +32,7 @@
         <% end %>
         <% if @movements.present? %>
         <div class='show-deposit'>
-          <h1>投資額 ¥ <%= @last_movement.amount %></h1>
+          <h1>投資額 ¥ <span id='deposit'><%= @last_movement.amount %></span></h1>
         </div>
         <% else %>
         <div class='show-deposit'>
@@ -45,7 +45,7 @@
           <h2 class='profit-title'>利益</h2>
         </div>
         <div class='show-price'>
-          <h1>利益 ¥ <%= @profit %></h1>
+          <h1>利益 ¥ <span id='profit'><%= @profit %></span></h1>
         </div>
         <div class='show-percent'>
           <h1>利益率 <%= @profit_percent %> %</h1>
@@ -79,7 +79,7 @@
           <%= f.number_field :amount, min: 0, class: 'input-amount', placeholder: "資産を記入する" %>
         </div>
         <div class='record-space-form'>
-          <%= f.submit "OK", class: 'create-record-btn' %>
+          <%= f.submit "OK", class: 'create-record-btn', id:'submit-btn' %>
         </div>
         <% end %>
       </div>
@@ -141,7 +141,7 @@
           <%= f.number_field :amount, min: 0, class: 'input-amount', placeholder: "投資額を記入する" %>
         </div>
         <div class='record-space-form'>
-          <%= f.submit "OK", class: 'create-record-btn' %>
+          <%= f.submit "OK", class: 'create-record-btn', id:'submit-btn' %>
         </div >
         <% end %>
       </div>

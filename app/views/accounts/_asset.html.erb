@@ -7,7 +7,7 @@
     </div>
     <div class='record-price'>
       <h2 class='asset-price'>¥
-        <%= asset.amount %>
+        <%= asset.amount.to_s(:delimited) %>
       </h2>
     </div>
     <div class='record-delete-btn'>

@@ -22,17 +22,17 @@
           <h2 class='asset-title'>総資産</h2>
         </div>
         <% if @assets.present? %>
-        <div class='show-asset'>
-          <h1>資産 ¥ <span id='asset'><%= @last_asset.amount %></span></h1>
+        <div class='show-asset', id='asset'>
+          <h1>資産　 ¥ <%= @last_asset.amount.to_s(:delimited) %></h1>
         </div>
         <% else %>
         <div class='show-asset'>
-          <h1>資産 ¥ xxxxxxxx</h1>
+          <h1>資産　 ¥ xxxxxxxx</h1>
         </div>
         <% end %>
         <% if @movements.present? %>
         <div class='show-deposit'>
-          <h1>投資額 ¥ <span id='deposit'><%= @last_movement.amount %></span></h1>
+          <h1>投資額 ¥ <%= @last_movement.amount.to_s(:delimited) %></h1>
         </div>
         <% else %>
         <div class='show-deposit'>
@@ -45,10 +45,10 @@
           <h2 class='profit-title'>利益</h2>
         </div>
         <div class='show-price'>
-          <h1>利益 ¥ <span id='profit'><%= @profit %></span></h1>
+          <h1>利益 ¥ <%= @profit.to_s(:delimited) %></h1>
         </div>
         <div class='show-percent'>
-          <h1>利益率 <%= @profit_percent %> %</h1>
+          <h1>利益率 <%= @profit_percent.to_s(:delimited) %> %</h1>
         </div>
       </div>
     </div>

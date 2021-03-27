@@ -3,11 +3,12 @@ class AssetsController < ApplicationController
   
   def create
     @asset = Asset.new(asset_params)
+    @account = @asset.account
+    @assets = @account.assets
+    @last_asset = @account.assets.order('created_at DESC').find_by(params[:id])
     if @asset.save
       redirect_to account_path(@asset.account)
     else
-      @account = @asset.account
-      @assets = @account.assets
       render "accounts/show"
     end
   end

@@ -23,7 +23,7 @@
         </div>
         <% if @assets.present? %>
         <div class='show-asset', id='asset'>
-          <h1>資産　 ¥ <%= @last_asset.amount.to_s(:delimited) %></h1>
+          <h1>資産　 ¥ <%= @last_asset.amount.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')  %></h1>
         </div>
         <% else %>
         <div class='show-asset'>
@@ -32,7 +32,7 @@
         <% end %>
         <% if @movements.present? %>
         <div class='show-deposit'>
-          <h1>投資額 ¥ <%= @last_movement.amount.to_s(:delimited) %></h1>
+          <h1>投資額 ¥ <%= @last_movement.amount.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')  %></h1>
         </div>
         <% else %>
         <div class='show-deposit'>
@@ -45,10 +45,10 @@
           <h2 class='profit-title'>利益</h2>
         </div>
         <div class='show-price'>
-          <h1>利益 ¥ <%= @profit.to_s(:delimited) %></h1>
+          <h1>利益 ¥ <%= @profit.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')  %></h1>
         </div>
         <div class='show-percent'>
-          <h1>利益率 <%= @profit_percent.to_s(:delimited) %> %</h1>
+          <h1>利益率 <%= @profit_percent.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,')  %> %</h1>
         </div>
       </div>
     </div>

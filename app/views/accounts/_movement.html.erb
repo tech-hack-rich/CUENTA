@@ -7,7 +7,7 @@
     </div>
     <div class='record-price'>
       <h2 class='asset-price'>¥
-        <%= movement.amount.to_s(:delimited) %>
+        <%= movement.amount.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,') %>
       </h2>
     </div>
     <div class='record-delete-btn'>

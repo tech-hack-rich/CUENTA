@@ -3,11 +3,12 @@ class MovementsController < ApplicationController
 
   def create
     @movement = Movement.new(movement_params)
+    @account = @movement.account
+    @movements = @account.movements
+    @last_movement = @account.movements.order('created_at DESC').find_by(params[:id])
     if @movement.save
       redirect_to account_path(@movement.account)
     else
-      @account = @movement.account
-      @movements = @account.movements
       render "accounts/show"
     end
   end

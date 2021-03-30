@@ -36,7 +36,7 @@
         </div>
         <% else %>
         <div class='show-deposit'>
-          <h1>投資額 ¥ xxxxxxxxx</h1>
+          <h1>投資額 ¥ xxxxxxxx</h1>
         </div>
         <% end %>
       </div>
@@ -70,7 +70,7 @@
                   id:"date",
                   use_month_numbers: true,
                   prompt:'--',
-                  start_year: 1930,
+                  start_year: (Time.now.year)-10,
                   end_year: (Time.now.year),
                   date_separator: '%s'),
                 "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
@@ -80,6 +80,9 @@
         </div>
         <div class='record-space-form'>
           <%= f.submit "OK", class: 'create-record-btn', id:'submit-btn' %>
+        </div>
+        <div class='record-space-form'>
+          <h1 class="notice-message"><%= notice %></h1>
         </div>
         <% end %>
       </div>
@@ -97,7 +100,25 @@
             </div>
           </div>
           <% if @account.assets.present? %>
-          <%= render partial: 'asset', collection: @assets %>
+            <% @assets.each do |asset| %>
+            <li class=record-list>
+              <div class=record-info>
+                <div class='create-date'>
+                  <h2 class='create-date'>
+                    <%= asset.date %>
+                  </h2>
+                </div>
+                <div class='record-price'>
+                  <h2 class='asset-price'>¥
+                    <%= asset.amount.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,') %>
+                  </h2>
+                </div>
+                <div class='record-delete-btn'>
+                  <%= link_to "削除", account_asset_path(@account, asset), method: :delete, class: "delete-red-btn" %>
+                </div>
+              </div>
+            </li>
+            <% end %>
           <% else %>
           <li class='record-list'>
             <div class='record-info'>
@@ -132,7 +153,7 @@
                   id:"date",
                   use_month_numbers: true,
                   prompt:'--',
-                  start_year: 1930,
+                  start_year: (Time.now.year)-10,
                   end_year: (Time.now.year),
                   date_separator: '%s'),
                 "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
@@ -143,6 +164,9 @@
         <div class='record-space-form'>
           <%= f.submit "OK", class: 'create-record-btn', id:'submit-btn' %>
         </div >
+        <div class='record-space-form'>
+          <h1 class="notice-message"><%= notice %></h1>
+        </div>
         <% end %>
       </div>
       <div class='asset-record'>
@@ -159,9 +183,26 @@
             </div>
           </div>
           <% if @account.movements.present? %>
-          <%= render partial: 'movement', collection: @movements %>
+            <% @movements.each do |movement| %>
+            <li class=record-list>
+              <div class=record-info>
+                <div class='create-date'>
+                  <h2 class='create-date'>
+                    <%= movement.date %>
+                  </h2>
+                </div>
+                <div class='record-price'>
+                  <h2 class='asset-price'>¥
+                    <%= movement.amount.to_s.gsub(/(\d)(?=\d{3}+$)/, '\\1,') %>
+                  </h2>
+                </div>
+                <div class='record-delete-btn'>
+                  <%= link_to "削除", account_movement_path(@account, movement), method: :delete, class: "delete-red-btn" %>
+                </div>
+              </div>
+            </li>
+            <% end %>
           <% else %>
-          </li>
           <li class='record-list'>
             <div class='record-info'>
               <div class='create-date'>
@@ -172,7 +213,7 @@
               </div>
               <div>
               <h2 class='record-price'>削除ボタン</h2>
-            </div>
+              </div>
             </div>
           </li>
           <% end %>

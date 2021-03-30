@@ -104,6 +104,11 @@
   text-align: center;
 }
 
+.notice-message{
+  color: red;
+  font-size: 20px;
+}
+
 .create-record-btn {
   width: 12vw;
   background: skyblue;

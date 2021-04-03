@@ -9,7 +9,43 @@
     <ul class='account-lists'>
       <%# サインイン中のユーザーがaccountを持っていたら表示する%>
       <% if Account.where(user_id: current_user.id).exists? %>
-      <%= render partial: 'account', collection: @accounts %>
+      <%#= render partial: 'account', collection: @accounts%>
+      <% @accounts.each do |account| %>
+        <%# クリックして詳細画面に飛ぶようにする%>
+        <li class='list'>
+        <%= link_to account_path(account.id), class: 'link-to-show' do %>
+          <div class='account-title'>
+            <h2 class='account-name'>
+              <%= account.name %>
+            </h2>
+          </div>
+          <div class='info'>
+            <div class='account-asset'>
+              <div>
+                <h2 class='asset-title'>総資産</h2>
+              </div>
+              <div class='asset'>
+                <h1>資産-------¥<%= Asset.where(account_id: account.id).last(1).pluck(:amount) %></h1>
+              </div>
+              <div class='deposit'>
+                <h1>投資額-------¥ 320,000</h1>
+              </div>
+            </div>
+            <div class='account-profit'>
+              <div>
+                <h2 class='profit-title'>利益</h2>
+              </div>
+              <div class='price'>
+                <h1>利益----------¥ 180,000</h1>
+              </div>
+              <div class='percent'>
+                <h1>利益率---------- 56.25%</h1>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </li>
+      <% end %>
       <%# /サインイン中のユーザーがaccountを持っていたら表示する%>
       <% else %>
       <li class='list'>

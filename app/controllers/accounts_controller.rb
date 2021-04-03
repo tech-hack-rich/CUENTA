@@ -6,6 +6,18 @@ class AccountsController < ApplicationController
   def index
     if user_signed_in?
       @accounts = Account.where(user_id: current_user.id).includes(:user).order('created_at DESC')
+      #資産額
+      @account = Account.new
+      @asset = Asset.new
+      @last_asset = @account.assets.order('created_at DESC').find_by(params[:id])
+      #投資額
+      @movement = Movement.new
+      @last_movement = @account.movements.order('created_at DESC').find_by(params[:id])
+      #利益計算
+      if @assets.present? && @movements.present?
+        @profit = @last_asset.amount - @last_movement.amount
+        @profit_percent = ((@profit.to_f / @last_movement.amount.to_f) * 100).floor(2).to_f
+      end
     end
   end
 

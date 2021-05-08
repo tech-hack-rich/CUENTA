@@ -137,3 +137,24 @@
   color: white;
   padding: 2px;
 }
+
+.info {
+  display: flex;
+  justify-content: space-between
+}
+
+.asset-title {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.asset, .deposit, .price, .percent { 
+  font-size: 22px;
+  color: black;
+}
+
+.profit-title {
+  font-size: 17px;
+  font-weight: bolder;
+}
+

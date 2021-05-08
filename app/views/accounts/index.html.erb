@@ -18,30 +18,9 @@
             <h2 class='account-name'>
               <%= account.name %>
             </h2>
-          </div>
-          <div class='info'>
-            <div class='account-asset'>
-              <div>
-                <h2 class='asset-title'>総資産</h2>
-              </div>
-              <div class='asset'>
-                <h1>資産-------¥<%= Asset.where(account_id: account.id).last(1).pluck(:amount) %></h1>
-              </div>
-              <div class='deposit'>
-                <h1>投資額-------¥ 320,000</h1>
-              </div>
-            </div>
-            <div class='account-profit'>
-              <div>
-                <h2 class='profit-title'>利益</h2>
-              </div>
-              <div class='price'>
-                <h1>利益----------¥ 180,000</h1>
-              </div>
-              <div class='percent'>
-                <h1>利益率---------- 56.25%</h1>
-              </div>
-            </div>
+            <h1 class='list-info'>
+              <%= account.info %>
+            </h1>
           </div>
         <% end %>
         </li>
@@ -51,30 +30,7 @@
       <li class='list'>
         <div class='account-title'>
           <h2 class='account-name'>CUENTAを作成しましょう</h2>
-        </div>
-        <div class='info'>
-          <div class='account-asset'>
-            <div>
-              <h2 class='asset-title'>総資産</h2>
-            </div>
-            <div class='asset'>
-              <h1>資産----------¥ 500,000</h1>
-            </div>
-            <div class='deposit'>
-              <h1>投資額-------¥ 320,000</h1>
-            </div>
-          </div>
-          <div class='account-profit'>
-            <div>
-              <h2 class='profit-title'>利益</h2>
-            </div>
-            <div class='price'>
-              <h1>利益----------¥ 180,000</h1>
-            </div>
-            <div class='percent'>
-              <h1>利益率---------- 56.25%</h1>
-            </div>
-          </div>
+          <h1 class='list-info'>アカウントの説明を登録するとここに表示されます</h1>
         </div>
       </li>
       <% end %>
@@ -85,102 +41,22 @@
       <li class='list'>
         <div class='account-title'>
           <h2 class='account-name'>新規登録をして資産を管理しよう</h2>
-        </div>
-        <div class='info'>
-          <div class='account-asset'>
-            <div>
-              <h2 class='asset-title'>総資産</h2>
-            </div>
-            <div class='asset'>
-              <h1>資産----------¥ 500,000</h1>
-            </div>
-            <div class='deposit'>
-              <h1>投資額-------¥ 320,000</h1>
-            </div>
-          </div>
-          <div class='account-profit'>
-            <div>
-              <h2 class='profit-title'>利益</h2>
-            </div>
-            <div class='price'>
-              <h1>利益----------¥ 180,000</h1>
-            </div>
-            <div class='percent'>
-              <h1>利益率---------- 56.25%</h1>
-            </div>
-          </div>
+          <h1 class='list-info'>アカウントの説明を登録するとここに表示されます</h1>
         </div>
       </li>
       <li class='list'>
         <div class='account-title'>
           <h2 class='account-name'>（例）積みてNISAアカウント</h2>
-        </div>
-        <div class='info'>
-          <div class='account-asset'>
-            <div>
-              <h2 class='asset-title'>総資産</h2>
-            </div>
-            <div class='asset'>
-              <h1>資産----------¥ 100,000</h1>
-            </div>
-            <div class='deposit'>
-              <h1>投資額-------¥ 50,000</h1>
-            </div>
-          </div>
-          <div class='account-profit'>
-            <div>
-              <h2 class='profit-title'>利益</h2>
-            </div>
-            <div class='price'>
-              <h1>利益----------¥ 50,000</h1>
-            </div>
-            <div class='percent'>
-              <h1>利益率---------- 100%</h1>
-            </div>
-          </div>
+          <h1 class='list-info'>2020年4月　開始</h1>
         </div>
       </li>
       <li class='list'>
         <div class='account-title'>
           <h2 class='account-name'>（例）FXアカウント</h2>
         </div>
-        <div class='info'>
-          <div class='account-asset'>
-            <div>
-              <h2 class='asset-title'>総資産</h2>
-            </div>
-            <div class='asset'>
-              <h1>資産----------¥ 40,000</h1>
-            </div>
-            <div class='deposit'>
-              <h1>投資額-------¥ 50,000</h1>
-            </div>
-          </div>
-          <div class='account-profit'>
-            <div>
-              <h2 class='profit-title'>利益</h2>
-            </div>
-            <div class='price'>
-              <h1>利益----------¥ -10,000</h1>
-            </div>
-            <div class='percent'>
-              <h1>利益率---------- -20%</h1>
-            </div>
-          </div>
-        </div>
       </li>
     </ul>
     <% end %>
   </div>
-  <%# ニュースをどっかから持ってくる %>
-  <div class='topics'>
-    <div class='topics-card'>
-      <div class='topic-image'>
-        <div class='topictitle'>
-        </div>
-      </div>
-    </div>
-  </div>
-  <%# /ニュースをどっかから持ってくる %>
 </div>
 <%= render "shared/footer" %>

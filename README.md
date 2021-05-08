@@ -19,8 +19,7 @@ URL：https://my-cuenta.herokuapp.com/
 
 ## トップページ（口座一覧表示画面）
 [![Image from Gyazo](https://i.gyazo.com/500ff4b9345a87750cd8e57ce78bccc7.jpg)](https://gyazo.com/500ff4b9345a87750cd8e57ce78bccc7)
-![トップページ2](https://user-images.githubusercontent.com/77149493/109942561-a754bb80-7d17-11eb-81dc-f71348a663fc.jpg)
-
+[![Image from Gyazo](https://i.gyazo.com/170dabf112fdbc063dd53ac5ef9f51c2.jpg)](https://gyazo.com/170dabf112fdbc063dd53ac5ef9f51c2)
 - ヘッダーの右側のボタンは、ユーザーのログイン状態によって、表示を変えています。ログイン状態では、ユーザーの名前と口座作成ボタン（CUENTA作成ボタン）が表示されており、そこから作成ページへと遷移できます。
 - 白枠の部分をクリックすると、該当する口座の詳細ページに遷移できます。
 - トップページではログインしている場合、ログインユーザーの口座を表示しますが、していない場合は口座がどのように表示されるかの一例が表示されます。

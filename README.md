@@ -18,7 +18,7 @@ URL：https://my-cuenta.herokuapp.com/
 # DEMO
 
 ## トップページ（口座一覧表示画面）
-![3f79a8de0f4d84b8fb6a7aee4cfde616](https://user-images.githubusercontent.com/77149493/109939682-a66e5a80-7d14-11eb-8ee6-dc06e572fcd8.jpg)
+[![Image from Gyazo](https://i.gyazo.com/500ff4b9345a87750cd8e57ce78bccc7.jpg)](https://gyazo.com/500ff4b9345a87750cd8e57ce78bccc7)
 ![トップページ2](https://user-images.githubusercontent.com/77149493/109942561-a754bb80-7d17-11eb-81dc-f71348a663fc.jpg)
 
 - ヘッダーの右側のボタンは、ユーザーのログイン状態によって、表示を変えています。ログイン状態では、ユーザーの名前と口座作成ボタン（CUENTA作成ボタン）が表示されており、そこから作成ページへと遷移できます。

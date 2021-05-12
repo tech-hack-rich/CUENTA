@@ -140,3 +140,21 @@ VsCode
 ### Association
 
 - belongs_to :account
+
+# 単体テスト実行結果
+
+## userモデル
+
+[![Image from Gyazo](https://i.gyazo.com/4edfacde8743350f0b89262f27fb6e75.png)](https://gyazo.com/4edfacde8743350f0b89262f27fb6e75)
+
+## accountモデル
+
+[![Image from Gyazo](https://i.gyazo.com/0baa92b30a3f001e751a74c242fa6222.png)](https://gyazo.com/0baa92b30a3f001e751a74c242fa6222)
+
+## assetモデル
+
+[![Image from Gyazo](https://i.gyazo.com/696917d7adf11cce432c78705aacc86c.png)](https://gyazo.com/696917d7adf11cce432c78705aacc86c)
+
+## movementモデル
+
+[![Image from Gyazo](https://i.gyazo.com/41065a2ce0693add6236843c793d4bdd.png)](https://gyazo.com/41065a2ce0693add6236843c793d4bdd)

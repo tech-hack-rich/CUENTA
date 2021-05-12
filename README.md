@@ -145,16 +145,16 @@ VsCode
 
 ## userモデル
 
-[![Image from Gyazo](https://i.gyazo.com/4edfacde8743350f0b89262f27fb6e75.png)](https://gyazo.com/4edfacde8743350f0b89262f27fb6e75)
+[![Image from Gyazo](https://i.gyazo.com/bf1001eb1feaa352c86da00b452f6895.png)](https://gyazo.com/bf1001eb1feaa352c86da00b452f6895)
 
 ## accountモデル
 
-[![Image from Gyazo](https://i.gyazo.com/0baa92b30a3f001e751a74c242fa6222.png)](https://gyazo.com/0baa92b30a3f001e751a74c242fa6222)
+[![Image from Gyazo](https://i.gyazo.com/f89f894b4082f40f5ef5e35bd29d3663.png)](https://gyazo.com/f89f894b4082f40f5ef5e35bd29d3663)
 
 ## assetモデル
 
-[![Image from Gyazo](https://i.gyazo.com/696917d7adf11cce432c78705aacc86c.png)](https://gyazo.com/696917d7adf11cce432c78705aacc86c)
+[![Image from Gyazo](https://i.gyazo.com/b920455430681ad6bdcd796deb097190.png)](https://gyazo.com/b920455430681ad6bdcd796deb097190)
 
 ## movementモデル
 
-[![Image from Gyazo](https://i.gyazo.com/41065a2ce0693add6236843c793d4bdd.png)](https://gyazo.com/41065a2ce0693add6236843c793d4bdd)
+[![Image from Gyazo](https://i.gyazo.com/6431cab10bcd63ca2f6fff9d517440a5.png)](https://gyazo.com/6431cab10bcd63ca2f6fff9d517440a5)
